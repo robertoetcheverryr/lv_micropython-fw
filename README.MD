@@ -2,10 +2,12 @@
 Built from https://github.com/lvgl/lv_micropython
 
 __Information:__
-* [Environment setup](#Environment setup)
-* [How to clone and compile](#How to clone and compile)
-* [How to flash](#How to flash)
-## Environment setup
+* [Environment setup](#environment)
+* [Clone and Compile](#clone-and-compile)
+* [How to flash](#how-to-flash)
+
+
+## Environment
 
 While micropython itself compiles and might (I did not test it) work when using ESP-IDF 4.4,
 lv_micropython does not. These firmwares have been compiled under Debian 11 using ESP-IDF 4.2.2.
@@ -16,7 +18,7 @@ cd esp-idf/
 ./install.sh esp32
 ```
 
-## How to clone and compile
+## Clone-and-Compile
 
 ```
 git clone -j8 --recurse-submodules https://github.com/lvgl/lv_micropython
@@ -44,7 +46,7 @@ Depending on whether or not the board has an external SPI RAM.
 
 Additionally, the LV_CFLAGS are used in this case to set options required for the ILI9341 display driver.
 
-## How to flash
+## How-to-flash
 
 From the ESP-IDF environment, invoke esptool.py with the following parameters to flash your ESP32 device, replacing GENERIC_SPIRAM with GENERIC if needed
 
